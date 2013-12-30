@@ -1,0 +1,46 @@
+Interview preparation plan:(Jan 6th, 9:45 am, 30 mins)
+
+12/29:
+	1:00 ~ 5:00: Programming interview book & set up the plan for interview preparation
+	6:30 ~ 10:00: Prepare answers to interview questions & practice oral speaking(skype)
+goal achieved?____
+
+12/30:
+	8:30 ~ 5:30: programming interview book
+	6:45 ~ 10:00: prepare for interview questions
+goal achieved?____
+	
+12/31:
+01/01:
+01/02:
+01/03:
+01/04:
+01/05:
+
+
+********************************************************************************
+Q1: pass-by-reference and pass-by-value
+My understanding of the difference between these 2 is, if you pass a variable into a function by-reference, and that variable's value is changed inside of the function, the changes to the variable's value is also reflected outside of the function. Pass-by-value means simply the value in the variable is passed into a function, and the modification of the value won't affect the value in the original variable.
+
+Everything in Java is pass-by-value
+Eg:
+	String x = "helloworld";
+	giveMeString(x);
+	System.out.println(x);
+	
+	public void giveMeString(String x){
+		x = "This is a string";
+	}
+
+********************************************************************************
+Q2: Overloading and Overriding
+Overloading: same method name with different numbers or differnt names of parameters
+	Overloading is a compile time phenomenon
+Overriding: same method name with same parameters but different implementations(inheritance)
+	Overriding happens at run time
+
+********************************************************************************
+Q3: Stack Implementataion:
+Discuss the stack data structure. Implement a stack in Java using either a linked list or a dynamic array, and justify your decision. Design the interface to your stack to be complete, consistent, and easy to use.
+
+A stack is a first-in-last-out(FILO) data structure: Elements are always removed in the reverse order in which they were added. The add and remove element operations are conventionally called push and pop, respectively. Stacks are useful data structures for tasks that are divided into multiple substasks. Tracking return addresses, parameters, and local variables for subroutines is one example of stack use; tracking tokens when parsing a programming language is another.
