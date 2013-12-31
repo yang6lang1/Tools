@@ -20,7 +20,10 @@ goal achieved?____
 
 ********************************************************************************
 Q1: pass-by-reference and pass-by-value
-My understanding of the difference between these 2 is, if you pass a variable into a function by-reference, and that variable's value is changed inside of the function, the changes to the variable's value is also reflected outside of the function. Pass-by-value means simply the value in the variable is passed into a function, and the modification of the value won't affect the value in the original variable.
+My understanding of the difference between these 2 is, if you pass a variable into a function by-reference, 
+and that variable's value is changed inside of the function, the changes to the variable's value is also reflected outside of the function. 
+Pass-by-value means simply the value in the variable is passed into a function, and the modification of the value won't affect the 
+value in the original variable.
 
 Everything in Java is pass-by-value
 Eg:
@@ -40,7 +43,170 @@ Overriding: same method name with same parameters but different implementations(
 	Overriding happens at run time
 
 ********************************************************************************
-Q3: Stack Implementataion:
-Discuss the stack data structure. Implement a stack in Java using either a linked list or a dynamic array, and justify your decision. Design the interface to your stack to be complete, consistent, and easy to use.
+Q3: Stack Implementation:
+Discuss the stack data structure. Implement a stack in Java using either a linked list or a dynamic array, and justify your decision. 
+Design the interface to your stack to be complete, consistent, and easy to use.
 
-A stack is a first-in-last-out(FILO) data structure: Elements are always removed in the reverse order in which they were added. The add and remove element operations are conventionally called push and pop, respectively. Stacks are useful data structures for tasks that are divided into multiple substasks. Tracking return addresses, parameters, and local variables for subroutines is one example of stack use; tracking tokens when parsing a programming language is another.
+A stack is a first-in-last-out(FILO) data structure: Elements are always removed in the reverse order in which they were added. 
+The add and remove element operations are conventionally called push and pop, respectively. 
+Stacks are useful data structures for tasks that are divided into multiple subtasks. Tracking return addresses, parameters, 
+and local variables for subroutines is one example of stack use; tracking tokens when parsing a programming language is another.
+
+Usually there are two ways to implement a stack: using dynamic array or linked list
+Dynamic array has the advantage of random access of any element in the array, while in linked list, elements can only be accessed by
+traversing through the linked list. However, in a stack data structure, operations are only performed at the end of the stack so 
+the advantage of dynamic array isn't very obvious. Furthermore, as dynamic array grows, it must occasionally resize itself which is time
+consuming. Therefore, I will use a linked list to implement the stack for now.
+
+First of all, I am going to design the interface of the stack
+
+Stack
+----
+-size: int
+-tail: ListItem<T>
+----
++push(ListItem<T> item):void
++pull():ListItem<T>
++peek():ListItem<T>
++getSize():int
++removeAll():void
++toString():String
+===============================
+ListItem<T>
+----
+-next: ListItem<T>
+-element: T
+----
+
+********************************************************************************
+Q4: Bug finding strategy:
+Find the bugs in the following C/C++ code:
+void removeHead( Node *head){
+  delete head;
+  head = head ->next;
+}
+
+Do a systematic analysis of every line of the function without the help of a debugger.
+Consider four common problem areas for any function you are given:
+1. Check that the data comes into the function properly
+2. Check that each line of the function works correctly.
+3. Check that the data comes out of the function correctly.
+4. Check the common error conditions.
+
+********************************************************************************
+Q5: Common Linked List problem #1:
+Find Mth-to-Last element of a Linked List(time and space-efficient)
+Approach 1: O(n)
+1st declare a pointer that start from the head and traverse to the Mth item from the front of the list
+2nd declare another pointer that start from the head
+3rd traverse both of the pointers simultaneously until the first pointer hit the end, which means the second
+	pointer is now point to the Mth-to-Last element (Smart!)
+
+Approach 2:O(n + (n-m))
+if the linked list has a getSize() function, just traverse from the front for (n-m) times
+if the linked list doesn't have that function:
+1st traverse the linked list to get a size n: O(n)
+2nd traverse the first (n-m) items: O(n-m)
+
+********************************************************************************
+Q5: Common Linked List problem #2:
+Flatten and unflatten the multi-layer linked list(use recursion and queue?)
+Q6: Null or cycle:
+Different approaches:
+1. use inheritance, when traversing, mark each element with a boolean flag O( n )
+2. check every ith element with the previous (i - 1) elements: O( n*(n-1)/2 ) = O(n^2)
+3. (smartest approach) 2 pointes, fast and slow pointer, fast updates 2 items every time, slow updates one
+	if its a cyclic, the slow pointer will eventually catch up the fast one
+
+********************************************************************************
+Chapter 5: Trees and Graphs
+Trees:
+A tree is made up of nodes (data elements) with zero, one, or several references to other nodes. Each node has only one other node referencing it.
+Trees are often used to store sorted or ordered data. By far, the most common way to store data in a tree is using a special tree called 
+a binary search tree(BST).
+One advantage of a binary search tree is that the lookup operation is fast and simple.
+Many tree operations can be implemented recursively.
+
+Heaps: (an implementation of priority queue)
+Another common tree is a heap. In heap, each child of a node has a value less than (min heap) or bigger than (max heap) the node's value.
+if extracting the max or min value needs to be fast, then use a heap. O(1)
+
+Back to trees:
+Common searches
+Breadth-First Search: (BFS)
+search every level from left to right. The time to find a node is O(n), so this type of search is best avoided for large trees. A
+BFS also uses a large amount of memory because it is necessary to track the child nodes for all nodes on a given level while searching that level.
+Depth-First Search: (DFS)
+A depth-first search follows one branch of the tree down as many levels as possible until the target node is found or the end is reached.
+
+Traversals:
+preorder reversal of a node performs the operation first on the node itself, then on its left descendants, and finally on its right descendants.
+Inorder left-itself-right
+postorder left-right-itself
+If you are asked to implement a traversal, recursion is a good way to start thinking about the problem.
+
+Graphs:
+Graphs are mode complicated than trees. List trees, they consist of nodes with children. Unlike trees, a node can have multiple "parents",
+possible creating a loop. In addition, the links between nodes, as opposed to the nodes themselves, may have values or weights. These
+links are called edges because they may contain more information than just a pointers. In graph, edges can be one way or two way.
+A graph with one0way edges is called a directed graph. A graph with only two-way pointers in called an undirected graph.
+
+********************************************************************************
+Binary Tree Problems:
+Q6: Preorder Traversal
+1. print out the root value
+2. do a preorder traversal on the left subtree
+3. do a preorder traversal on the right subtree
+
+Q7: Preoder Traversal without using recursion
+Explicitly using stack
+
+1st. declare a stack
+2nd. push the root onto stack
+3rd. infinite loop 
+	pop from stack	
+	if node != null, quit loop
+	otherwise, print node
+	if left != null push left;
+	if right != null push right;
+
+********************************************************************************
+Q8: Lowest Common Ancestor
+Common way: make lists of all the ancestors of both nodes and then search these two lists to find the first node
+where they differ. The node right above this divergence will be the lowest common ancestor.
+
+Slightly more efficient way:
+start from the node, the first node that has value between v1 and v2 is the lowest common ancestor.
+
+********************************************************************************
+Chapter 6: Arrays and Strings
+In C/C++, an array name is equivalent to a pointer constant to the first element of the array. Which means you can't
+initialize the elements of one array with another array using a simple assignment. You have to use memcpy().
+In C/C++, compiler only tracks the location of the array, not the size. So it is programmer's responsibility to check 
+the boundary condition of array.
+
+In Java, each access to an array index is checked against the current size of the array and an exception is thrown if the index is out of bounds.
+This makes array access a relatively expensive operation when compared to C/C++ arrays.
+*** Multiple references to the same array element should be simplified by storing the value of the array element into a single variable.
+When arrays are allocated, note that the elements in the array are not initialized, even if the array is declared to hold an object type.
+
+C# arrays are similar to Java arrays. 
+
+Strings:
+Strings are sequences of characters.
+Java:
+Java strings are objects of the String class, a special system class.
+Java strings are immutable: They cannot be changed once the string has been constructed. Methods that appear to modify a string actually
+return a new string instance.
+
+Example of using StringBuffer(more efficient way to manipulate String object):
+StringBuffer b = new StringBuffer(); 
+for( int i = 0; i < 10; ++i ){ 
+	b.append( i ); 
+	b.append( “ ” ); 
+} 
+String s = b.toString();
+
+********************************************************************************
+Array and String problem:
+Q9: Find the first non-repeated character
