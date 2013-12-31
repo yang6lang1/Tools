@@ -1,0 +1,70 @@
+Got an interview through my school's internship program. The hiring manager and current intern interviewed me. They tend to ask some challenging questions, you definitely want to think about your answers. You will definitely want to do your research on the company and culture before the interview, since there are many divisions to the company. The culture is laid back, yet professional, and the people are very intelligent and friendly. Know why you want to work for Microsoft and that your career aspirations are/what you look for in a job.
+
+Tell me about a time when you had a heavy workload. How did you handle it?  
+
+Have you worked with someone you didn't like? If so, how did you handle it?
+
+If Microsoft were to select a new location for another office, how would you plan that? 
+
+Think of a friend, co-worker, and colleague. How would they describe you?
+
+Fill an integer matrix in a spiral fashion. Starting in the upper left corner and going clock-wise, the next element should be one more than the previous.  
+
+Program a function that takes in two words and checks if the first is a substring of the second.
+
+Find the angle between the hour, minute, and second hand on a clock at any given time
+
+Merge two sorted arrays in place, with the second array having enough space to fit in the first. Do not create a new array. 
+
+Why do you want the SDET role instead of the SDE role?
+
+what was the most difficult technical problem you have encounter and how you go about solving it
+
+Vancouver:
+I was interviewed as an intern for 30 minutes and was asked about my education history and 2 algorithm questions. The interview was scheduled by my recruitment helpers at the University of British Columbia, Canada. A cover letter and resume were submitted for when I applied to Microsoft. Prior to the interview, you are asked to fill out a form about what domains interest you and what type of position you would prefer (program manager, software development engineer, software development engineer in test). After my internship was over, they offered me a full time position. No further interview was required. I seem to be an exception to the usual case in which a full day interview process is normally required.
+
+Sort a list of words alpha-numerically
+
+make sure that you are prepared to answer questions about previous employment and any coding you do outside of school/work.
+
+explain the internet to a child.
+
+you have 9 marbles, all of them identical except one of them is slightly heavier than the rest. in order to determine which is the heaviest, you have a balancing scale, however you are only allowed to use it twice. how do you determine the heaviest marble?
+[this is easy]
+
+check if you have a valid combination of '(', '{', '['.
+
+First one: given the pointer to a head node that contains 2 pointers pointing to any other 2 nodes(like a simplified graph), you need to make a deep copy of this graph.
+Second one: check if a BST is a valid BST
+Third one: given a list of stock prices, you need to find the date when you buy and sell the stock so that your profit is max
+Fourth one: you have a stream, you need to check if the stream contains a specific string in it. The stream can tell you if it is EOF. You cannot use any STL; you need to write strlen if you need it, you need to write IsSubstring if you want to use it.
+
+Different ways or sorting, going through an algorithm for combining and sorting 3 list of data.
+
+merge 2 sorted linked lists.
+
+You have billions of strings sorted in an array. You don't have any access to it. You just have a method that returns the string pertaining to a index. Use only that method to find the location of a given string" I started out at 0(n^2) and kept on improving to o(logn)
+
+Why do you want to apply?
+Why this role?
+Why Microsoft?
+
+You'll meet your potential co-workers, mentors, and managers.
+This could be from multiple product groups based on the interests you shared in your resume submission and during your initial interview.
+
+We＊ll ask questions to help us get to know you.
+The specific questions we ask will depend on the position you＊re applying for, but all our questions are intended to help us see your capabilities and potential to grow. 
+Generally, we look for a strong desire to learn, high intelligence, a passion for technology, willingness to work hard, rock-solid skills, an entrepreneurial spirit, and of course, a desire to be the best!
+
+Be a STAR on the phone.
+The next stage is typically a telephone interview and will follow the STAR method:
+
+S 每 Situation: Background. Set the scene.
+
+T 每 Task:  Specifics of what＊s required: when, where, who
+
+A 每 Action: What you did, skills used, behaviors, characteristics
+
+R 每 Result: Outcome, what happened?
+
+Take some time before your interview to think about some examples you can use in your answers, and find a quiet place to take the call. Coffee shops and public places are not the best venues.
