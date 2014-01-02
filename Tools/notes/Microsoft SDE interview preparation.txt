@@ -214,3 +214,35 @@ String s = b.toString();
 ********************************************************************************
 Array and String problem:
 Q9: Find the first non-repeated character
+Use either hashMap<Character, Integer> to keep track of the number of occurrence of each char
+or use int[128](128 is the number of possible ASCII characters)
+
+Q10: Remove Specified Characters
+Save as Q9, use HashMap or boolean[128]
+
+Q11: Reverse words:
+Approach 1: use stack, keep pushing(don't forget the space);
+Approach 2: start from the end of string, use a temp buffer to track whole word.
+Approach 3: 1st reverse the string char by char, then reverse the word char by char 
+
+Q12: Integer/String Conversions:
+String to integer: 1 * 1000 + 3 * 100 + 2 *10 + 3 * 1 
+Integer to String: 1371: 1 = 1371 % 10 / (10/10); 7 = 1371 % 100 / (100 / 10)....
+
+********************************************************************************
+Chapter 7: Recursion
+Recursion is a deceptively simple concept: Any routine that calls itself is recursive.
+Recursion is most useful for tasks that can be defined in terms of similar subtasks.
+Recursive algorithms have two types of cases: recursive cases and base cases.
+
+Although recursion is a very powerful technique, it is not always the best approach, and rarely
+is it the most efficient approach.
+A recursive algorithm can be implemented without recursive calls by using a stack, but it is
+usually more trouble than it's worth.
+
+********************************************************************************
+Q13: Binary Search:
+Implement a function to perform a binary search on a sorted array of integers to find the index of a given
+integer. Use this method declaration:
+int binarySearch (int[] array, int lower, int upper, int target);
+Comment on the efficiency of this search and compare it with other search methods.
