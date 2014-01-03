@@ -8,15 +8,21 @@ goal achieved?____4
 12/30:
 	8:30 ~ 5:30: programming interview book
 	6:45 ~ 10:00: prepare for interview questions
-goal achieved?____
+goal achieved?____4
 	
 12/31:
 	8:30 ~ 5:30: programming interview book
 	6:45 ~ 10:00: prepare for interview questions
-goal achieved?____
+goal achieved?____4
 
 01/01:
+goal achieved?____3
+
 01/02:
+	8:30 ~ 5:30: programming interview book(Recursion , bit manipulation and sorting)
+	6:45 ~ 10:00: prepare for interview questions
+goal achieved?____
+
 01/03:
 01/04:
 01/05:
@@ -236,7 +242,8 @@ Recursion is most useful for tasks that can be defined in terms of similar subta
 Recursive algorithms have two types of cases: recursive cases and base cases.
 
 Although recursion is a very powerful technique, it is not always the best approach, and rarely
-is it the most efficient approach.
+is it the most efficient approach. It is due to the relatively large overhead for routine calls on most platforms.
+For a simple recursive routine like factorial, many computer architectures spend more time on call overhead than the actual calculation.
 A recursive algorithm can be implemented without recursive calls by using a stack, but it is
 usually more trouble than it's worth.
 
@@ -246,3 +253,153 @@ Implement a function to perform a binary search on a sorted array of integers to
 integer. Use this method declaration:
 int binarySearch (int[] array, int lower, int upper, int target);
 Comment on the efficiency of this search and compare it with other search methods.
+
+(Implementation see RecursiveProblems.java)
+
+Recursive implementations are generally less efficient than equivalent iterative implementations.
+A binary search is O(logn) because half of the search is eliminated on each iteration. This is more efficient than a simple
+search through all the elements, which would be O(n). However, in order to perform a binary search the array must be sorted,
+an operation that is usually O(nLogn).
+
+********************************************************************************
+Chapter 9: Object-Oriented Programming
+Object-oriented programming is a programming technique that uses classes as an abstract representation of real
+world entities. A class can have variables and methods, which correspond to the entity's attributes and actions(give example).
+Inheritance enables a class to provide a more detailed or specialized version of its parent class.
+
+Polymorphism is the ability to provide multiple implementation of an action and to select the correct implementation based on the 
+object type.
+
+********************************************************************************
+Interface and Abstract Classes:
+Q14: Explain the difference between an interface and an abstract class in object-oriented programming.
+-An interface declares a set of related methods, outside of any class.
+-An abstract class is an incomplete class definition that declares but does not define all of its methods
+
+Interface hides all the details of the classes that implement it from the user of the interface. It is really important in Java because,
+unlike C++, Java doesn't support multiple inheritance.
+
+Unlike interface, an abstract class is a proper class, which means it can have variables and method implementations. Unlike usual classes,
+abstract classes can have incomplete methods that forces their children classes to provide an implementation. Abstract class can not
+be instantiated directly.
+
+********************************************************************************
+Q15: Why do C# and Java disallow the multiple inheritance of classes? Ambiguity
+Awesome example:
+class A{
+	protected :
+		bool flag;
+};
+
+class B : public A{};
+class C : public A{};
+
+class D : public B, public C{
+	public:
+		void setFlag(bool argFlag){
+			flag = argFlag; // ambiguous
+		}
+};
+
+********************************************************************************
+Chapter 12: Counting, Measuring, and Ordering Puzzles
+Tackling Brainteasers:
+One of the most important themes to keep in mind is that the solutions to brainteasers are almost never straightforward or obvious.
+Solve the Right Problem
+1. make assumptions, categorize them based on possibility
+2. identify false assumptions and approach to the truth
+Don't Be Intimidated
+-break the problem into parts
+-try simplify the problem
+-try specific examples
+
+Think outside of the box, don't be restricted by the constraints
+Sometimes try to make a false assumption and see if that will work.
+
+********************************************************************************
+Non techincal Questions:
+Do you use linux? - what the interviewer is really saying: "We're using Linux-will you be able to do the job even though you haven't used it?"
+DON'T ANSWER "NO"
+Sample answer: "I haven't used Linux specifically, but I have done Unix development."
+
+Pay attention to the job description when it's explained to you. Emphasize any similar and relevant experience that makes you a strong candidate.
+Questions:
+Q16:
+What do you want to do?
+I was contacted by a Microsoft HR(Veronika) through linkedIn who suggested me to apply for Microsoft jobs. So I did. But at time, I do not 
+know much about SDET in Microsoft. I assumed it involves a lot of manual test or regression test which are tedious and boring.
+But later on, when I was doing researches on the position to study for this interview, I realized in Microsoft, testers are treated equally
+as developers and they are coders as well....
+
+Tester DNA has to include a natural ability to do systems level thinking, skills in problem decomposition, a passion for quality, 
+and a love of finding out how something works and then how to break it. ... 
+Now that is what makes up a tester that makes them different from a developer. 
+The way we combine that DNA with engineering skills is by testing software. The name we choose should 
+reflect this but also be attractive to the engineers we want to hire. Something that shows we use development skills to drive testing.
+
+What do you know about Microsoft
+Microsoft has raised a lot of great, legendary 
+Jon Devaan: lead developer for Excel, Windows Vista SP1, Windows 7, Windows 8
+Charles Simonyi
+Bill Gates
+Paul Allen
+Steve Ballmer
+
+Products:
+Windows OS
+Microsoft Office
+Internet Explorer
+Windows Phone
+Surface Tablet
+XBox
+Skype
+MSN
+DirectX
+
+********************************************************************************
+Real Microsoft interview questions:
+Technical questions:
+Q1: Merge 2 sorted linked list:
+Do something similar to mergeSort()'s merging part.
+
+Q2: Different ways of sorting, going through an algorithm for combining and sorting 3 list of data.
+Insertion sort, merge sort, heap sort.....(only mention the ones you know how to implement)(review heap sorting before interview)
+combine and sort 3 list of data:
+Question: are those 3 lists of data sorted already?
+if not, sort them first O(nlogn) (better use mergeSort cuz im gonna use mergeSort-like method later)
+and merge them (use 3 pointers)
+
+Q3: check if you have a valid combination of '(', '{', '['.
+I think this involves the use of stack.
+1. Keep traversing thru the context, every time you encounter a '(', push a ')' onto the stack;
+2. every time you encounter a right bracket, you pull from the stack and compare if they are the same type;
+if there is a single violation, it is wrong
+or if the context is finished but the stack is not empty, it is wrong
+or if the stack is empty but you are trying to pull from it, it is wrong
+
+Q4: Sort a list of words alpha-numerically
+use any sorting algorithm you want. Start with with writing out the method signiture.
+
+Q5: Merge two sorted arrays in place, with the second array having enough space to fit in the first. Do not create a new array. 
+Ask questions
+start from the end of the array and work your way to the front
+analysis the algorithm
+do not forget about the special cases
+
+Q6: Find the angle between the hour, minute, and second hand on a clock at any given time
+Ask questions: what about angle greater than 180 degree?
+calculate each angle directly (clockwise, can be > 180) and subtract larger one with smaller one
+
+Q7: Program a function that takes in two words and checks if the first is a substring of the second.
+See StringProblems.java
+
+Q8:Fill an integer matrix in a spiral fashion. Starting in the upper left corner and going clock-wise, 
+	the next element should be one more than the previous.  
+
+
+Brain teaser questions:
+Q1: you have 9 marbles, all of them identical except one of them is slightly heavier than the rest. 
+in order to determine which is the heaviest, you have a balancing scale, however you are only allowed to use it twice. 
+how do you determine the heaviest marble?
+Divide them into 3 3-marble group, measure 2 of them and eliminate 2/3 of them every time. You only need 2 tries;
+

@@ -49,6 +49,39 @@ public class StringProblems {
 
 	return null;
   }
+
+  /**Program a function that takes in two words and checks if the first is a substring of the second.*/
+  public boolean checkSubstring(String s1, String s2){
+	boolean isSubString = false;
+	
+	List<Integer> occurs = new ArrayList<Integer>();
+	char c = s1.charAt(0);
+	for(int i = 0; i < s2.length(); i++){
+	  if(c == s2.charAt(i)){
+		occurs.add(i);
+	  }
+	}
+	
+	for(Integer index : occurs){
+	  if(index + s1.length() > s2.length()) continue;
+	  
+	  boolean match = true;
+	  for(int i = 0; i < s1.length(); i++){
+		if(s1.charAt(i) == s2.charAt(index + i)){
+		  match = true;
+		}
+		else{
+		  match = false;
+		  break;
+		}
+	  }
+	  if(match) {
+		return true;
+	  }
+	}
+	
+	return isSubString;
+  }
   
   /**Worst case scenario: O(n + n) = O(n)*/
   public char findFirstNonRepeatedChar(String string) throws Exception{
@@ -232,6 +265,12 @@ public class StringProblems {
 	System.out.println("#5: intToString");
 	String s3 = test.intToString(-2);
 	System.out.println(s3);
+	System.out.println();
+	
+	System.out.println("#6: checkSubstring");
+	String s4 = "string";
+	String s5 = "This is a string lalala.";
+	System.out.println(test.checkSubstring(s4, s5));
   }
 
 }
