@@ -36,10 +36,11 @@ explain the internet to a child.
 
 
 
-First one: given the pointer to a head node that contains 2 pointers pointing to any other 2 nodes(like a simplified graph), you need to make a deep copy of this graph.
-Second one: check if a BST is a valid BST
-Third one: given a list of stock prices, you need to find the date when you buy and sell the stock so that your profit is max
-Fourth one: you have a stream, you need to check if the stream contains a specific string in it. The stream can tell you if it is EOF. You cannot use any STL; you need to write strlen if you need it, you need to write IsSubstring if you want to use it.
+
+
+Third one: given a list of stock prices, you need to find the date when you buy and sell the stock so that your profit is max(too ambiguous)
+Fourth one: you have a stream, you need to check if the stream contains a specific string in it. The stream can tell you if it is EOF. 
+You cannot use any STL; you need to write strlen if you need it, you need to write IsSubstring if you want to use it.
 
 
 

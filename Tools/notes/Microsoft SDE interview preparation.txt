@@ -395,11 +395,82 @@ See StringProblems.java
 
 Q8:Fill an integer matrix in a spiral fashion. Starting in the upper left corner and going clock-wise, 
 	the next element should be one more than the previous.  
+See RecursiveProblems.java
 
+Q9:given the pointer to a head node that contains 2 pointers pointing to any other 2 nodes(like a simplified graph), 
+	you need to make a deep copy of this graph.
+I am not sure if my answer is correct:(question: is it possible for the children node to point to its ancestor?
+if there isn't loop in the graph, you can use recursion to copy each subtree and assign that as the child for the root
+it is similar to tree pre-order traversal
+
+Q10: check if a BST is a valid BST
+traverse the BST, check if each node has more than 2 children and if each node's left < root and root <= right
 
 Brain teaser questions:
 Q1: you have 9 marbles, all of them identical except one of them is slightly heavier than the rest. 
 in order to determine which is the heaviest, you have a balancing scale, however you are only allowed to use it twice. 
 how do you determine the heaviest marble?
 Divide them into 3 3-marble group, measure 2 of them and eliminate 2/3 of them every time. You only need 2 tries;
+
+Behavioral questions:
+Q1: Tell me about yourself
+My name is Alex Yang. I am a third year Computer Engineering student in SFU. I had just just finished an 8-month Co-op as Junior
+Application Developer in a software company. Even though I am in Engineering, I am also very passionate about computer science technologies 
+such as application programming, game development, artificial intelligence(machine learning), networking stuff. I started learning programming 
+by taking a C++ intro course, and after that I took a data structure course in Java. And then I finished a software engineering course and 
+made an iPhone application in Objective-C. During my past Co-op, I had a lot of free time after work so I decided to do some side projects. 
+As you can see from my Resume, both of the side projects that I listed were in Java so I am more proficient in Java than in other language right now. 
+I know Microsoft uses C/C++ and C#, but from what I know, Java and C# are really similar. One of side projects is an individual project and another one 
+is a team-project because I want to get some practice about managing the code using repositories. This is basically all my programming experience.
+Oh! I forgot to mention that recently when I was working on my side project, I got really interested in 3D graphics rendering technology so I
+started learning LWJGL(which is the Java port of OpenGL). I just finished the tutorial about shaders a few days ago. I know Microsoft uses DirectX
+but I believe the knowledge about matrix math and shaders, textures are transferable.
+
+TODO: self-starter(MIT OCW), passionate about technology, open for change, eager to learn new knowledge, team-oriented, easy-going
+Never stop learning, keeo developing problem-solving skills
+
+Q2: Question about your previous employment
+I actually experienced two different roles in my past co-op. In first four month, I was working as a QA automation developer. I did manual regression
+test on the User Interface of the company's product following the existing test plans. And later on, I started design and implement the automation
+scripts in Selenium IDE so that the QA team can run my scripts at night. Selenium IDE is an open source tool used to perform UI automation test for
+web applications. It uses XPath to find the elements in the webpage and perform operations on it(eg: verify text, scroll, click).
+
+In the second month, I was transferred into the developer team and started working on a project in a team of three developers. The project was about
+implementing a new functionality for the company product. We were pretty lucky because the project is new and our supervisor was very co-op friendly.
+We had the chance to experience the entire Agile development process. We set up meetings with Business Analysts to talk about the requirements.
+We met with the head developer to finalize the design decision and walk through the code because he built the framework of the project. After the
+implementation process, we merged, tested and reviewed the code. After this one round, we presented the project to Business Analysts again and 
+make modifications based on the their requests.
+
+(Side question for Q2: what is black-box testing and give me an example)
+Black-box testing is a method in software testing which focuses on the functionality of the product. Black-box testing does not require the
+tester to know how exactly the function is implemented. They know need to test the expected behavior.
+
+Q3: Personal projects
+I have worked on 2 side projects so far, both are Java 2D games that run on desktop and both are rendered using Java Swing.
+The first one is a customizable pinball game, which is inspired by a course project of MIT OCW. I worked on this project individually for four months
+and learned a lot of stuff, such as how to build application interface using Java Swing, OOP of course, basic collision detections, and also the 
+basics of XML because I implemented an XML parser and reader to save and load the game configurations. Unfortunately, the game was pretty buggy
+and I didn't realize what I did wrong until the late stage of the development. I figured out the problem after doing a lot of research and realized
+it is a bad idea to track the game objects using their pixel position because pixels are always integers, it is almost inevitable to have tunnelling
+effect if the object moves too fast. I did my research, and that brought me into my second side project.
+
+The second project used a 2D physics engine called JBox2D, which is a Java port of Box2D. Box2D is the physics engine used by Angry Bird.
+
+
+-what you learned
+-what went right, what went wrong
+-describe positive and negative experience
+
+
+Abstraction Level:  At what level of abstraction would you like to impact product development? (Rank 1 thru 4 or NI)
+3
+1.	UI/Design Layer – Working with Rapid Application Development tools, web development technologies, design and mark-up languages (CSS, XHTML, etc).
+1
+2.	Application Layer – User facing applications, API’s, servers, databases, .NET Platforms, etc.
+2
+3.	Operating System/Developer Tools– Compilers, file system, network transport, core operating system, kernel, low-level graphics engines, ect.
+4
+4.	Foundation/Low Level – Microcode, firmware, drivers, etc.
+
 
