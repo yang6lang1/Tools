@@ -1,32 +1,3 @@
-Interview preparation plan:(Jan 6th, 9:45 am, 30 mins)
-
-12/29:
-	1:00 ~ 5:00: Programming interview book & set up the plan for interview preparation
-	6:30 ~ 10:00: Prepare answers to interview questions & practice oral speaking(skype)
-goal achieved?____4
-
-12/30:
-	8:30 ~ 5:30: programming interview book
-	6:45 ~ 10:00: prepare for interview questions
-goal achieved?____4
-	
-12/31:
-	8:30 ~ 5:30: programming interview book
-	6:45 ~ 10:00: prepare for interview questions
-goal achieved?____4
-
-01/01:
-goal achieved?____3
-
-01/02:
-	8:30 ~ 5:30: programming interview book(Recursion , bit manipulation and sorting)
-	6:45 ~ 10:00: prepare for interview questions
-goal achieved?____
-
-01/03:
-01/04:
-01/05:
-
 
 ********************************************************************************
 Q1: pass-by-reference and pass-by-value
@@ -414,7 +385,7 @@ Divide them into 3 3-marble group, measure 2 of them and eliminate 2/3 of them e
 
 Behavioral questions:
 Q1: Tell me about yourself
-My name is Alex Yang. I am a third year Computer Engineering student in SFU. I had just just finished an 8-month Co-op as Junior
+My name is Alex Yang. I am a third year Computer Engineering student in SFU. I had just finished an 8-month Co-op as Junior
 Application Developer in a software company. Even though I am in Engineering, I am also very passionate about computer science technologies 
 such as application programming, game development, artificial intelligence(machine learning), networking stuff. I started learning programming 
 by taking a C++ intro course, and after that I took a data structure course in Java. And then I finished a software engineering course and 
@@ -430,10 +401,10 @@ TODO: self-starter(MIT OCW), passionate about technology, open for change, eager
 Never stop learning, keeo developing problem-solving skills
 
 Q2: Question about your previous employment
-I actually experienced two different roles in my past co-op. In first four month, I was working as a QA automation developer. I did manual regression
+I actually experienced two different roles in my past Co-op. In first four month, I was working as a QA automation developer. I did manual regression
 test on the User Interface of the company's product following the existing test plans. And later on, I started design and implement the automation
 scripts in Selenium IDE so that the QA team can run my scripts at night. Selenium IDE is an open source tool used to perform UI automation test for
-web applications. It uses XPath to find the elements in the webpage and perform operations on it(eg: verify text, scroll, click).
+web applications. It uses XPath to find the elements in the web page and perform operations on it(eg: verify text, scroll, click).
 
 In the second month, I was transferred into the developer team and started working on a project in a team of three developers. The project was about
 implementing a new functionality for the company product. We were pretty lucky because the project is new and our supervisor was very co-op friendly.
@@ -465,12 +436,12 @@ The second project used a 2D physics engine called JBox2D, which is a Java port 
 
 Abstraction Level:  At what level of abstraction would you like to impact product development? (Rank 1 thru 4 or NI)
 3
-1.	UI/Design Layer – Working with Rapid Application Development tools, web development technologies, design and mark-up languages (CSS, XHTML, etc).
+1.	UI/Design Layer Working with Rapid Application Development tools, web development technologies, design and mark-up languages (CSS, XHTML, etc).
 1
-2.	Application Layer – User facing applications, API’s, servers, databases, .NET Platforms, etc.
+2.	Application Layer User facing applications, API’s, servers, databases, .NET Platforms, etc.
 2
-3.	Operating System/Developer Tools– Compilers, file system, network transport, core operating system, kernel, low-level graphics engines, ect.
+3.	Operating System/Developer Tools, Compilers, file system, network transport, core operating system, kernel, low-level graphics engines, ect.
 4
-4.	Foundation/Low Level – Microcode, firmware, drivers, etc.
+4.	Foundation/Low Level Microcode, firmware, drivers, etc.
 
 
