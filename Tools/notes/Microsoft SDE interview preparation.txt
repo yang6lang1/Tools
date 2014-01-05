@@ -419,29 +419,63 @@ tester to know how exactly the function is implemented. They know need to test t
 
 Q3: Personal projects
 I have worked on 2 side projects so far, both are Java 2D games that run on desktop and both are rendered using Java Swing.
-The first one is a customizable pinball game, which is inspired by a course project of MIT OCW. I worked on this project individually for four months
+The first one is a customizable pinball game called Gizmoball, which is inspired by a course project of MIT OCW. I worked on this project individually for four months
 and learned a lot of stuff, such as how to build application interface using Java Swing, OOP of course, basic collision detections, and also the 
 basics of XML because I implemented an XML parser and reader to save and load the game configurations. Unfortunately, the game was pretty buggy
 and I didn't realize what I did wrong until the late stage of the development. I figured out the problem after doing a lot of research and realized
-it is a bad idea to track the game objects using their pixel position because pixels are always integers, it is almost inevitable to have tunnelling
+it is a bad idea to track the game objects using their pixel positions because pixels are always integers, it is almost inevitable to have tunnelling
 effect if the object moves too fast. I did my research, and that brought me into my second side project.
 
-The second project used a 2D physics engine called JBox2D, which is a Java port of Box2D. Box2D is the physics engine used by Angry Bird.
+The second project, Blockadia, is a game engine built on top of a 2D physics engine called JBox2D, which is a Java port of Box2D. Box2D is the physics engine used by Angry Bird. 
+In my second project, I worked with a friend and used GitHub to manage the code, the bug issues and the versions of the project. My friend took charge of the user interface and I 
+was working on the game back-end including simple frame-based sprite automation, collision handling, user input handling and the 2D viewport camera with the ability of
+zooming in/out and dragging to move the view. I have finished creating a spaceship demo game using my game engine and wrapped it into an executable file so if you are interested,
+I can send it to you right away. From this project, I got a lot of practice on OOP and became more proficient with the use of some more advanced Java features such as generics, abstract
+class, input listeners in Java Swing because they are used everywhere. This project also expanded my horizon and made me realize how many things I want to learn. I became
+very interested in things like Thread programming, Networking topics(TCP, UDP),  and game graphics rendering. I started learning OpenGL because of this.
+
+Q4: School projects
 
 
+Q5: What do you want to do?
+I am interested in a lot of computer science technologies. For example, application development, game programming, 3D graphics rendering technologies, Networking topics(TCP UDP).
+I put application development as my top choice because it suits my current programming experience. Most of my programming practice are related to that field so 
+I believe I can start being productive asap and also learn a lot of stuff. Also I am currently learning OpenGL by myself. ....(talk about OpenGL and DirectX)
+
+Q6: What is your favorite programming language(computer, operating system)?
+(Many ppl develop almost religious attachment to certain languages, computers or operating systems. suit the problem at hand
+Acknowledge that there are some tasks which your favorite language is a poor choice.
+Believe that no language is a universal solution)
+So far, since I've been using a lot of Java, Java language is the one that I am most comfortable with. But apparently, due to a lot of reasons, Java is very slow. It
+designed to be portable, secure and for fast development so it won't be able to fit into some situation. What I believe is, these computer languages are all just
+embodiment of technologies and they are changing everyday. I am very open for change and always willing to learn new stuff.
+
+Q7: What are your career goals? (Why you want this job?-apart from the money; How you see it fit into your overall career)
+I am hope to work in development for a while and work on some challenging projects. Then, I'm looking to go into project management and design.
+
+Q8: Why do you leave your last job?(What doesn't interest you)
+
+Q9: Why should we hire you?
+I am a strong self-starter, and I am always eager to learn new stuff. 
+
+Q10: Do you have any questions?
+Can you give me an example of the daily responsibilities of this job?
+What skills and attributes do you value most for someone being hired for this position?
+
+-what did you do
 -what you learned
 -what went right, what went wrong
 -describe positive and negative experience
 
 
 Abstraction Level:  At what level of abstraction would you like to impact product development? (Rank 1 thru 4 or NI)
-3
-1.	UI/Design Layer Working with Rapid Application Development tools, web development technologies, design and mark-up languages (CSS, XHTML, etc).
-1
-2.	Application Layer User facing applications, API’s, servers, databases, .NET Platforms, etc.
-2
-3.	Operating System/Developer Tools, Compilers, file system, network transport, core operating system, kernel, low-level graphics engines, ect.
-4
-4.	Foundation/Low Level Microcode, firmware, drivers, etc.
+
+3-  1.	UI/Design Layer Working with Rapid Application Development tools, web development technologies, design and mark-up languages (CSS, XHTML, etc).
+
+1- 2.	Application Layer User facing applications, APIs, servers, databases, .NET Platforms, etc.
+
+2- 3.	Operating System/Developer Tools, Compilers, file system, network transport, core operating system, kernel, low-level graphics engines, ect.
+
+4- 4.	Foundation/Low Level Microcode, firmware, drivers, etc.
 
 
