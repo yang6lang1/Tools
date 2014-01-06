@@ -4,7 +4,7 @@ You will definitely want to do your research on the company and culture before t
 to the company. The culture is laid back, yet professional, and the people are very intelligent and friendly. 
 Know why you want to work for Microsoft and that your career aspirations are/what you look for in a job.
 
-Tell me about a time when you had a heavy workload. How did you handle it?  
+
 
 Have you worked with someone you didn't like? If so, how did you handle it?
 
@@ -18,7 +18,6 @@ Think of a friend, co-worker, and colleague. How would they describe you?
 
 Why do you want the SDET role instead of the SDE role?
 
-what was the most difficult technical problem you have encounter and how you go about solving it
 
 Vancouver:
 I was interviewed as an intern for 30 minutes and was asked about my education history and 2 algorithm questions.
