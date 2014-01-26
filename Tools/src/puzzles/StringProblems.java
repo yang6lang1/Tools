@@ -19,11 +19,6 @@ public class StringProblems {
 	  "Some other strings"
   };
 
-  class Item{
-	public char c;
-	public int posInOne;
-  }
-
   public String findLongestSubstring(String s1, String s2){
 	List<Integer> occurs = new ArrayList<>();
 	for (int i = 0; i < s1.length(); i++) {
@@ -256,8 +251,6 @@ public class StringProblems {
 	
 	System.out.println("#4: reverseStringBetterApproach");
 	String s2 = "Do or do not, there is no try.";
-	//s2 = " try.";
-	//s2 = new String(test.reverseWord(s2.toCharArray(), 0, s2.length()-1) );
 	s2 = test.reverseStringBetterApproach(s2);
 	System.out.println(s2);
 	System.out.println();
