@@ -1,0 +1,177 @@
+Cracking the Coding Interview
+
+*****************************************************************
+Chapter 1: Arrays and Strings
+1.1 Implement an algorithm to determine if a string has all unique characters. What if you cannot use 
+additional data structure?
+Assume all the chars in the string are ASCII characters, that gives you 128 possibilities.
+Use int[] count = new int[128], initialize all the elements to 0;
+char[] charArray = s.toCharArray();
+for(char c : charArray){
+	count[c] ++;
+}
+// determine how many times character D has appeared
+System.out.println("D has appeared for: " + count['D'] + " times.");
+Above approach is the method used to calculate the occurrence of each character, maybe not very efficient in
+this context
+Approach #1: use boolean[] array
+Approach #2: use bit manipulation(Eg: 8 int = 8x32 = 256 ASCII bit, flip/check corresponding bit)
+
+1.2 Write code to reverse a C-Style String (C-String means that "abcd" is represented as five characters, 
+including the null character )
+//reverse c-style string(NULL-terminated)
+
+void reverse(char* str){
+	if (str == NULL) return;
+	int length = 0;
+	while(str[length]){
+		length++;
+	}
+    
+	for(int i = 0; i < (int)(length / 2); i ++){
+		char temp = str[i];
+		str[i] = str[length - 1 - i];
+		str[length - 1 - i] = temp;
+	}
+}
+
+1.3 Design an algorithm and write code to remove the duplicate characters in a string without using any 
+additional buffer NOTE: One or two additional variables are fine An extra copy of the array is not
+FOLLOW UP
+Write the test cases for this method
+loop through the string
+Approach #1:use boolean[256]
+Approach #2:use any type of variable to serve as a buffer(all you need to do is to access its bits)
+Code:
+	public String removeDuplicateChars(String s){
+		if (s == null) return null;
+		char[] str =s.toCharArray();
+		int length = str.length;
+		if (length < 2) return s;
+
+		int[] buffer = new int[8]; //8x32 = 256 bits
+		for(int i = 0 ; i < 8; i ++){
+			buffer[i] = 0;
+		}
+
+		int count = 0;
+		int i = 0;//i tracks where the c is in the array
+		while(count < str.length){
+			char c = str[count];
+			int index = ((int)c) / 32;
+			int offset = ((int)c) % 32;
+			if (( buffer[index] & (1 << offset) ) == 0) {
+				str[i] = str[count]; 
+				++i; 
+				buffer[index] |= (1 << offset);
+			} 
+			count++;
+		}
+		
+		StringBuffer sb = new StringBuffer();
+		for(int j = 0; j < i; j++){
+			sb.append(str[j]);
+		}
+		return sb.toString();
+	}
+Test case:
+1. "abcd"
+2. null
+3. "" <--empty string
+4. "a" <--string with 1 char
+5. "aaabbbcccddd" <--continuous duplicate chars
+6. "abababababacdcdcdcdcd" <--non-continuous duplicate chars
+
+1.4 Write a method to decide if two strings are anagrams or not
+String s1 = "abcd";
+String s2 = "cadb";
+1). Use Map<Character, Integer> map = new HashMap<Character, Integer>();
+2). Use int[] array = new int[128];
+
+1.5 Write a method to replace all spaces in a string with '%20'
+Create another char[] array = new char[s.length + (3-1)*numOfSpaceInString];
+start from the end of the string, and a pointer points to the end of the newly created array
+if char == ' ', fill in 3 chars in the new char array and increment the pointer by 3
+if char != ' ', fill in 1 char in the new char array with the corresponding char in old string, 
+	pointer++
+
+1.6 Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a 
+method to rotate the image by 90 degrees Can you do this in place?
+	public void rotateMatrixBy90(int[][] img){
+		if (img.length != img[0].length) return; //square matrix only
+		
+		for(int layer = 0 ; layer < (img.length/2) ; layer++){//layers
+			for(int offset = layer; offset < img.length -1 - layer ; offset++){//offset
+				int temp = img[layer][offset];
+				//left -> top
+				img[layer][offset] = img[img.length-1-offset][layer];
+				//bot -> left
+				img[img.length-1-offset][layer] = img[img.length-1-layer][img.length-1-offset];
+				//right -> bot
+				img[img.length-1-layer][img.length-1-offset] = img[offset][img.length-1-layer];
+				//top -> right
+				img[offset][img.length-1-layer] = temp;
+			}
+		}
+	}
+***Need to be careful with the offset computation of layers	
+
+1.7 Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column 
+is set to 0
+Use an int[] for row and col
+keep track of which row and which col has 0 element (during the first time traverse)
+during the second time traverse, set the element to 0 whenever (row[i] == 0 | col[j] == 0)
+O(2 * M * N) = O(MN) time
+
+Assume you have a method isSubstring which checks if one word is a substring of another Given two strings, 
+s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring 
+(i e , "waterbottle" is a rotation of "erbottlewat")
+SHIT WHY CANT I FIGURE THIS OUT!
+if s1.length != s2.length return false
+else
+	concatenate s1 with s1 again, so you get "s1s1"
+	check if s2 is substring of "s1s1"
+	DONE
+
+*****************************************************************
+Chapter 2: LinkedList
+
+TODO: Finish DHDLLinkedList
+2.1 Write code to remove duplicates from an unsorted linked list 
+FOLLOW UP
+How would you solve this problem if a temporary buffer is not allowed?
+
+Implement an algorithm to find the nth to last element of a singly linked list
+
+Implement an algorithm to delete a node in the middle of a single linked list, given only access to that 
+node
+EXAMPLE
+Input: the node 'c from the linked list a->b->c->d->e
+Result: nothing is returned, but the new linked list looks like a->b->d->e
+
+You have two numbers represented by a linked list, where each node contains a sin- gle digit The 
+digits are stored in reverse order, such that the 1's digit is at the head of the list Write a 
+function that adds the two numbers and returns the sum as a linked list
+EXAMPLE
+Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
+Output: 8 -> 0 -> 8
+
+Given a circular linked list, implement an algorithm which returns node at the begin- ning of the loop
+DEFINITION
+Circular linked list: A (corrupt) linked list in which a node's next pointer points to an earlier node, 
+so as to make a loop in the linked list
+EXAMPLE
+input: A -> B -> C -> D -> E -> C [the same C as earlier]
+output: C
+
+*****************************************************************
+Chapter 11: Testing:
+Test a real world object:
+1. Define the functionality to be delivered to the users
+2. Define the targeted clients/users
+3. Define the expected behaviors and the different ways the object can possibly fail
+4. Apply the object into different environments & use different ways to test it
+(Weather, Water, Crazy users) (automation test, stress test, black/white box test, regression test)
+
+*****************************************************************
+

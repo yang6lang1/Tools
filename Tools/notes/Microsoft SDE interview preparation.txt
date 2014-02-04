@@ -481,15 +481,24 @@ possible places where the bug occurs by using a lot of ways of testing. For exam
 and create special game configurations just for that case. Finally, I found the problem was caused by the data structure I used to store all the game objects. I was originally
 using array and the problem didn't occur when there were only a few objects. So I did a lot of research and implemented a Quadtree that separates the game objects by the regions they 
 occupied. And that successfully solved a lot of related bugs.
+********************************************************************************
+First-round Microsoft question:
+1. Why do you want to work for Microsoft
+Microsoft has contributed so much to the world and gained such a high reputation. Honestly speaking,
+it is attractive to everyone in my age. But more importantly, Microsoft to me is more like a window
+to the world. It has so many world-scale products that I am interested in.... and it will be fantastic if I can contribute to them
+or even improve them. Plus, I am interested in a lot of CMPT technologies such as Networking, Game Dev,
+3D graphics engine and Microsoft is wide enough to include all of them.
+I'm a do-er, which can be proved by my independent projects and SFU Hackathon. Once I discover a new
+technology that interests me, I will set goals for myself and start taking actions to achieve those
+goals. Before the SFU Hackathon, I had no experience of Windows API or image processing. But in that
+24 hours, I learned how to compress image and convert the image into grayscale by manipulating its RGBA.
+We even attempted to make our first TCP/IP client socket and transferred the processed image data to the
+server.
 
-Abstraction Level:  At what level of abstraction would you like to impact product development? (Rank 1 thru 4 or NI)
-
-3- 1.	UI/Design Layer Working with Rapid Application Development tools, web development technologies, design and mark-up languages (CSS, XHTML, etc).
-
-1- 2.	Application Layer User facing applications, APIs, servers, databases, .NET Platforms, etc.
-
-2- 3.	Operating System/Developer Tools, Compilers, file system, network transport, core operating system, kernel, low-level graphics engines, ect.
-
-4- 4.	Foundation/Low Level Microcode, firmware, drivers, etc.
-
-
+2. Tell me about your project experience
+3. Tell me about the most difficult problem that you ran into and how you solved it
+4. Test a Microsoft keyboard
+5. Design an alarm clock for blind people
+6. 3 buckets of fruit, identify them
+7. Questions for them?
