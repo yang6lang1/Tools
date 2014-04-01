@@ -11,8 +11,8 @@ public class ImageToText {
 
 	public static void main(String[] args) {
 		
-		File file = new File("src/Data/TubeInfo.txt");
-		String imagePath = "/Image/Tube.jpg";
+		File file = new File("src/Data/BackgroundInfo.txt");
+		String imagePath = "/Image/Background.png";
 		BufferedImage image = null;
 		String content = "";
 		int width = 0;
@@ -28,7 +28,6 @@ public class ImageToText {
 		width = image.getWidth();
 		height = image.getHeight();
 		pixels = image.getRGB(0, 0, width, height, null, 0, width);
-
 		for(int i = 0; i < pixels.length; i++){
 			int result = 0;
 			int r = 0, g = 0 ,b = 0;
@@ -40,6 +39,7 @@ public class ImageToText {
 			
 			if(i % width == 0){
 				content +="\n";
+				System.out.println("processed line:"+ i / width);
 			}
 			content += ""+result + " ";
 		}
