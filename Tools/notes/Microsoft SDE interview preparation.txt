@@ -432,7 +432,7 @@ effect if the object moves too fast. I did my research, and that brought me into
 
 The second project, Blockadia, is a game engine built on top of a 2D physics engine called JBox2D, which is a Java port of Box2D. Box2D is the physics engine used by Angry Bird. 
 In my second project, I worked with a friend and used GitHub to manage the code, the bug issues and the versions of the project. My friend took charge of the user interface and I 
-was working on the game back-end including simple frame-based sprite automation, collision handling, user input handling and the 2D viewport camera with the ability of
+was working on the game back-end including simple frame-based sprite animation, collision handling, user input handling and the 2D viewport camera with the ability of
 zooming in/out and dragging to move the view. I have finished creating a spaceship demo game using my game engine and wrapped it into an executable file so if you are interested,
 I can send it to you right away. From this project, I got a lot of practice on OOP and became more proficient with the use of some more advanced Java features such as generics, abstract
 class, input listeners in Java Swing because they are used everywhere. This project also expanded my horizon and made me realize how many things I want to learn. I became
@@ -486,10 +486,10 @@ First-round Microsoft question:
 1. Why do you want to work for Microsoft
 Microsoft has contributed so much to the world and gained such a high reputation. Honestly speaking,
 it is attractive to everyone in my age. But more importantly, Microsoft to me is more like a window
-to the world. It has so many world-scale products that I am interested in.... and it will be fantastic if I can contribute to them
-or even improve them. Plus, I am interested in a lot of CMPT technologies such as Networking, Game Dev,
-3D graphics engine and Microsoft is wide enough to include all of them.
-I'm a do-er, which can be proved by my independent projects and SFU Hackathon. Once I discover a new
+to the world. It has so many world-scale products that is using technologies that I am interested in
+such as 3D graphics engine, networking and cloud technology. I believe people do their best work when
+they are working on thing they are interested in, and same applies to me.
+I'm a do-er, which can be proved by my independent projects and SFU Hackathon. Once I discover a 
 technology that interests me, I will set goals for myself and start taking actions to achieve those
 goals. Before the SFU Hackathon, I had no experience of Windows API or image processing. But in that
 24 hours, I learned how to compress image and convert the image into grayscale by manipulating its RGBA.
@@ -497,6 +497,8 @@ We even attempted to make our first TCP/IP client socket and transferred the pro
 server.
 
 2. Tell me about your project experience
+
+
 3. Tell me about the most difficult problem that you ran into and how you solved it
 4. Test a Microsoft keyboard
 5. Design an alarm clock for blind people
