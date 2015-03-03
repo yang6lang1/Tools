@@ -1,0 +1,42 @@
+Interview checklist:
+-	What do they want to know from me in this particular interview
+-	What can I say to stand out
+-	Know your Resume: read P29 Cracking Code Interview
+-	Prepare great questions to ask back
+-	Follow-up/thank-you email
+-	Must-have knowledge: P32
+
+- Sorting algorithms:
+bubble sort
+selection sort
+merge sort
+quick sort
+bucket sort(counting sort)
+
+Facebook Internview:
+- Algorithm Knowledge
+	ask a lot of questions to understand the problem
+	explain your solution
+	why this algorithm is better (space & time efficiency)
+	start from easy one and optimize
+
+- Coding 
+	1 or 2 coding questions using http://collabedit.com/
+	take the hint to improve the coding
+	show thinking process and problem solving skills
+	use the links to practice coding puzzles
+
+- Culture Fit
+	research news about
+	Communicate well - hierarchical way -> top down: Situation Action Result
+	describe project: overview, detail, involvement, problems, solution, talk about the project from beginning to end, improvement, what you learned
+	why working for Facebook, from an engineering point of view: interested in Facebook technology
+
+- Ask Questions
+	See if you can ask questions to narrow down the problems
+
+- Others
+	coding, algorithm questions in my best language, design patterns, and more specific questions to your background
+	data structures, binary trees, linked lists, object oriented analysis/design
+	ASK GOOD QUESTIONS AT THE END
+
