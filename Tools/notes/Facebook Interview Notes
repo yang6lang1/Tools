@@ -40,3 +40,46 @@ Facebook Internview:
 	data structures, binary trees, linked lists, object oriented analysis/design
 	ASK GOOD QUESTIONS AT THE END
 
+************************************************************
+Interview Questions
+************************************************************
+Difference between Java and C++
+1. Java doesn't have pointers, it uses reference
+2. Java does not allow multiple class inheritance while C++ does.
+3. Java runs in a virtual machine. C++ compiles the code into assembly language
+4. C++ natively supports unsigned algorithm
+5. In Java, parameters are always pass by value. In C++, parameters can be passed by value, reference, pointer
+6. Java has built-in garbage collection
+7. C++ allows operator overloading. Java only allows method overloading.
+
+
+************************************************************
+Array & String:
+************************************************************
+1. Write a method to decide if two strings are anagrams or not.
+-	approach1: sort both strings O(nlogn)
+-	approach2: traverse both strings to get an array of character count
+* learned int array initialization: cannot use term " int[] a1,a2 = new int[256] " => "int[] a1 = new int[256], a2 = new int[256]"
+
+2. Write a method to replace all spaces in a string with %20
+* learned that Java does not support c style string(null-terminated string)
+
+3. NxN matrix, each pixel is 4 bytes, write a method to rotate the image by 90 degrees.
+* approach the problem systematically. think about the reason why each variable is used.
+
+4. Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column is set to 0
+* be careful that all the matrix will become 0 if you set 0 while traversing!
+-	approach, keep track which row and which col contains 0 after first round of traversing, and then set
+-	use int[] or HashSet <- this is better
+
+5. Assume you have a method isSubstring which checks if one work is a substring of another. Given two strings, 
+s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring 
+("waterbottle", "erbottlewat")
+-	approach: concatenate s1 with itself, use the function call to check if s2 is a substring of the string
+* think outside of the box!!!
+
+************************************************************
+Linked Lists
+************************************************************
+Write code to remove duplicates from an unsorted linked list
+How to do this if temporary buffer is not allowed?
