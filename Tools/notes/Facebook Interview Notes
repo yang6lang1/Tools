@@ -81,11 +81,18 @@ s1 and s2, write code to check if s2 is a rotation of s1 using only one call to 
 ************************************************************
 Linked Lists
 ************************************************************
-Write code to remove duplicates from an unsorted linked list
+1. Write code to remove duplicates from an unsorted linked list
 How to do this if temporary buffer is not allowed?
 
-Implement an algorithm to find the kth to last element of a singly linked list
+2. Implement an algorithm to find the kth to last element of a singly linked list
 -	approach: have 2 pointers
 
-Implement algorithm to delete a node in the middle of a singly linked list, given only access to that node
+3. Implement algorithm to delete a node in the middle of a singly linked list, given only access to that node
 -	Similar to my SAP interview questions
+
+4. You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, 
+such that the 1's digit is at the head of the list. Write function to add two numbers and returns the sum as a linked list.
+-	traverse both linked list together, add carry bit to the next iteration
+
+5. Given a circular linked list, implement an algorithm which returns the node at the beginning of the loop.
+  
