@@ -83,3 +83,9 @@ Linked Lists
 ************************************************************
 Write code to remove duplicates from an unsorted linked list
 How to do this if temporary buffer is not allowed?
+
+Implement an algorithm to find the kth to last element of a singly linked list
+-	approach: have 2 pointers
+
+Implement algorithm to delete a node in the middle of a singly linked list, given only access to that node
+-	Similar to my SAP interview questions

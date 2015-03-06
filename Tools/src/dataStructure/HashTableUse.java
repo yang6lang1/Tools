@@ -13,7 +13,7 @@ public class HashTableUse {
 	private List<String> names;
 	private Queue<String> queue;
 	private Set<Integer> numbers;
-	
+
 	public void rotateMatrix(){
 		int[][] a = new int[4][4], b;
 
@@ -86,7 +86,7 @@ public class HashTableUse {
 		numbers.add(1);
 		numbers.add(2);
 	}
-	
+
 	public void useList () {
 		System.out.println();
 		names.add("1");
@@ -299,6 +299,51 @@ public class HashTableUse {
 		}
 	}
 
+	public void deleteMiddle(){
+		System.out.println();
+		Node<Integer> node6 = new Node<Integer>(6,null);
+		Node<Integer> node5 = new Node<Integer>(5,null);
+		Node<Integer> node4 = new Node<Integer>(4,node5);
+		Node<Integer> node3 = new Node<Integer>(3,node4);
+		Node<Integer> node2 = new Node<Integer>(2,null);
+		Node<Integer> node1 = new Node<Integer>(1,node2);
+		
+		deleteMiddle(node1);
+	}
+	
+	private void deleteMiddle(Node<Integer> head){
+		if(head == null) return;
+		if(head.getNext() == null) {
+			head = null;
+			return;
+		}
+
+		Node<Integer> slowptr = head, fastptr = head, prevslow = head;
+
+		while(fastptr != null){
+			fastptr = fastptr.getNext();
+			if(fastptr == null){
+				prevslow.setNext(slowptr.getNext());
+				break;
+			}
+
+			fastptr = fastptr.getNext();
+
+			prevslow = slowptr;
+			slowptr = slowptr.getNext();
+
+			if(fastptr == null){
+				prevslow.setNext(slowptr.getNext());
+			}
+		}
+		
+		Node<Integer> ptr = head;
+		while(ptr != null){
+			System.out.println("Element: " + ptr.getElement());
+			ptr = ptr.getNext();
+		}
+	}
+	
 	public static void main (String[] args) {
 		HashTableUse use = new HashTableUse();
 		use.useQueue();
@@ -307,5 +352,6 @@ public class HashTableUse {
 		use.bitManipulation();
 		use.useAreAnagrams();
 		use.rotateMatrix();
+		use.deleteMiddle();
 	}
 }
