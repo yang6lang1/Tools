@@ -475,12 +475,15 @@ First of all, I believe this situation can be avoided by doing good time managem
 Share with team mate. Negotiate with customers. Split the task and rank different subtasks based on the priority, try to finish high priority ones.
 
 Q13: what was the most difficult technical problem you have encounter and how you go about solving it
-I have ran into a lot of challenging problems during last co-op and when I was working on my personal project, one of them is quite unforgettable.
-When I worked on my pinball game, when I just finished the physics part, there's always random bugs happen when there are so many objects in the game world. I narrowed down the 
-possible places where the bug occurs by using a lot of ways of testing. For example, I did unit testing on the important methods, set up break points when the game is running,
-and create special game configurations just for that case. Finally, I found the problem was caused by the data structure I used to store all the game objects. I was originally
-using array and the problem didn't occur when there were only a few objects. So I did a lot of research and implemented a Quadtree that separates the game objects by the regions they 
-occupied. And that successfully solved a lot of related bugs.
+I have ran into a lot of challenging problems during last co-op and when I was working on my personal project, 
+one of them is quite unforgettable. When I worked on my pinball game, when I just finished the physics part, 
+there's always random bugs happen when there are so many objects in the game world. I narrowed down the possible 
+places where the bug occurs by using a lot of ways of testing. For example, I did unit testing on the important 
+methods, set up break points when the game is running, and create special game configurations just for that case. 
+Finally, I found the problem was caused by the data structure I used to store all the game objects. I was 
+originally using array and the problem didn't occur when there were only a few objects. So I did a lot of 
+research and implemented a Quadtree that separates the game objects by the regions they occupied. And that 
+successfully solved a lot of related bugs.
 ********************************************************************************
 First-round Microsoft question:
 1. Why do you want to work for Microsoft

@@ -1,0 +1,129 @@
+************************************
+Facebook suggestions
+************************************
+1. Add one more sharing option for posts & photos: private (requires a customized password everytime)
+	- problem: integration with instagram
+	- problem: local photo cache
+2. Browsing the old photos sometimes crash, improve the compress and extract function
+3. Implement a delete and recovery machenism for photos & posts
+
+************************************
+Describe yourself
+************************************
+- last year of computer engineering
+- consider myself a software guy
+- finished 16-month of coop in 2 different companies, both are 8 months and both are for software positions
+- passionate about technology, specifically machine learning, game development and OpenGL computer graphics
+- strong self-starter: 
+	Set goals for myself
+	I take online coruses from Coursera, MITOCW and iTune university
+	I worked on two side projects, 2D games developed in Java so I am more proficient with Java but I am also open to other technologies.
+	I join Hackathons and case competitions in order to keep improving my technical skills and interpersonal skills.
+	I was planning to participate in GSoC to contribute to Open Source Community
+- I am technical but also team oriented
+	as an engineering student, most of my projects are team based
+	comfortable working in a team
+	In SAP, I volunteered for their intern committee and was selected to be the co-chair of the Intern Career Development committee
+	another co-chair, business major
+	organize events such as Networking Events, Career Workshop, Coffee Corners for other interns
+	presented the status to the SAP Vancouver Executive Leader Team
+	I find that experience very enjoyable and beneficial to me
+
+************************************
+Why Facebook?
+************************************
+passionate about machine learing. This semester, I am taking online coursera course offered Andrew Ng from Stanford University. Used a lot in Facebook.
+Facebook organizes internal Hackathons every two weeks. I have joined a Microsoft Hackathon last year with my friend and implemented....I find the fast-pace environment very enjoyable because I become very productive when there's a specific goal and a time constraint
+I have been in SAP for 8 months and their development process is very mature. It is professional and requires a lot of cross-team communication on the daily basis. It is professional and effective but it is kinda slow and I find myself not particularly suitable for that. Sometimes it takes way too long for the code to get into code base. Facebook is well-known for its fast-pace development environment. So I hope I have the opportunity to experience this culture.
+
+************************************
+Field of interest?
+************************************
+I find myself very facinated by machine learning technology. the way it uses calculus and linear algebra to train the neuron network.
+I enjoy game development (game is an integration of a lot of technologies)including the use of physics libraries, game logic design when data structures are involved, game rendering that uses computer graphics technology. 
+UI automation testing. Back-end product build experience with Maven. Implemented server-side function in Java
+
+************************************
+Previous employment
+************************************
+ZE PowerGroup
+	online business analysis web applciation
+	manual testing, automation testing using selenium IDE, implement a new feature of the product
+	- don't remember all details
+	- automated profile builder
+	- backend: decision tree
+	- not fancy, if conditions
+	- a lot of practice of Java interface, generics, abstract class in order to make the code readable and flexible
+	learned:
+	- XPath, CSS, JQuery to select UI elements
+	- Concept and good practice of UI automation
+	- Agile development methodology
+		small team; daily meetings; frequent change of the product due to customers' need
+
+SAP
+	each month code sprint
+	Manual testing, P&R testing on PC and iPad product(Chrome Dev Tool, WAN Emulator), automation testing using Selenium Webdriver
+	Product backend Git/Gerrit/Maven framework(fix bugs in pom files, develop MOJO)
+	each code sprint there's bug bashing week. participate in UI related bug fixing
+	Learned:
+	- how to prioritize the work & how to put team's value on top of my own
+	- how to build up your credit in the team
+	- learned javascript, maven, git/gerrit framework, selenium webdriver, agile development
+
+************************************
+Side project
+************************************
+I have worked on 2 side projects so far, both are Java 2D games that run on desktop and both are rendered using Java Swing.
+The first one is a customizable pinball game called Gizmoball, which is inspired by a course project of MIT OCW. I worked on this project individually for four months and learned a lot of stuff, such as how to build application interface using Java Swing, OOP, basic collision detections, and also the 
+basics of XML because I implemented an XML parser and reader to save and load the game configurations. Unfortunately, the game was pretty buggy
+and I didn't realize what I did wrong until the late stage of the development. I figured out the problem after doing a lot of research and realized
+it is a bad idea to track the game objects using their pixel positions because pixels are always integers, it is almost inevitable to have tunnelling
+effect if the object moves too fast. I did my research, and that brought me into my second side project.
+
+I would like to describe my second side project mentioned on my Resume, Blockadia, is a game engine. The user can use this game engine to quickly create their own 2d games. It has a framework that supports user to implement save/load, zoom in/out in the virtual game world, physics simulation (JBox2D) and rendering using Java Swing.
+In this project, I worked with a friend and used GitHub to manage the code, branches and bugs of the project. My friend took charge of the user interface 
+I was working on the game back-end including simple frame-based sprite animation, collision handling, user input handling and the 2D viewport camera with the ability of
+zooming in/out and dragging to move the view. I have finished creating a spaceship demo game using my game engine and wrapped it into an executable file so if you are interested,
+I can send it to you right away. From this project, I got a lot of practice on OOP and became more proficient with the use of some more advanced Java features such as generics, abstract
+class, input listeners in Java Swing because they are used everywhere. This project also get me exposed to many new technologies such as OpenGL rendering and game AI development. It made me realize how many things I want to learn. I became very interested in things like Thread programming, Networking topics(TCP, UDP),  and game graphics rendering. I started learning OpenGL because of this.
+
+************************************
+Most difficult problem
+************************************
+Metalslug one-way stair
+
+************************************
+Heavy workflow and how did you solve it
+************************************
+	this can be avoided by effective planning and communication
+	- learn how to prioritize the work based on team's value, and my own ability
+	- whenever i was overloaded with work, i will tell the team and manager right away
+	- if the task can only be done by me. split into subtasks and finish the important ones
+
+************************************
+Conflict with others
+************************************
+i know how to stay out of trouble.
+case competition
+-	resolve conflicts
+-	work hard myself
+-	show appreciation to other ppl's work
+-	don't be too attached to the idea
+
+************************************
+Questions to the interviewer
+************************************
+-	Facebook's development cycle. how long? daily scrum?
+-	What collaboration tool does Facebook use? Git? Code review process?
+-	How are tasks assigned to different members? do engineers pick themselves? or assigned by feature leads? are their designated testing teams or everyone do testing? How are co-ops or new hires selected for team?
+-	Generally, how big is each team? What is the general composition of each team?
+-	Do you run into the kind of situation that your team's work is blocked by other teams? How did you solve it?
+
+-	next step?
+
+************************************
+Finish
+************************************
+Thank you again for calling. It was a pleasure talking to you. I really enjoyed the conversation and I hope we have opportunity to work together. Have a good day!
+
+-	thank you note to interviewers/HR

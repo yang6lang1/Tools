@@ -2,9 +2,9 @@ package dataStructure;
 
 public class BSTNode<T extends Comparable<T>> implements Comparable<BSTNode<T>>{
   
-  private BSTNode<T> left;
-  private BSTNode<T> right;
-  private T element;
+  public BSTNode<T> left;
+  public BSTNode<T> right;
+  public T element;
   
   public BSTNode(){
 	this(null, null, null);

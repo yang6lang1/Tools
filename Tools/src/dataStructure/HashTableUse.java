@@ -8,13 +8,14 @@ import java.util.Map;
 import java.util.Set;
 
 public class HashTableUse {
-
+	
 	private Map<String, String> dictionary;
 	private List<String> names;
 	private Queue<String> queue;
 	private Set<Integer> numbers;
 
 	public void rotateMatrix(){
+		
 		int[][] a = new int[4][4], b;
 
 		int count = 0;
@@ -63,7 +64,7 @@ public class HashTableUse {
 
 	public HashTableUse () {
 		dictionary = new HashMap<String, String>();
-		names = new ArrayList<String>();
+		names = new ArrayList<String>(); 
 		queue = new Queue<String>();
 	}
 
@@ -344,6 +345,49 @@ public class HashTableUse {
 		}
 	}
 	
+	public int[][] fillMatrix(int[][] out, int n){
+		if(n == 0) return null;
+		
+		if(n == 1){
+			out[n-1][n-1] = n*n;
+		}
+		else{
+			out = fillMatrix(out,n-1);
+			for(int i = 1; i <=n; i++){
+				out[i-1][n-1] = i*n;
+				out[n-1][i-1] = i*n;
+			}
+		}
+		return out;
+	}
+	
+	public void printMatrix(){
+		System.out.println();
+		int n = 4;
+		int[][] out = new int[n][n];
+		out = fillMatrix(out, n);
+		
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < n; j++){
+				System.out.print(out[i][j] +"\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void useCheckBST(){
+		BSTNode<Integer> node6 = new BSTNode<Integer>(7,null,null);
+		BSTNode<Integer> node5 = new BSTNode<Integer>(5,null,null);
+		BSTNode<Integer> node4 = new BSTNode<Integer>(3,null,null);
+		BSTNode<Integer> node3 = new BSTNode<Integer>(1,null,null);
+		BSTNode<Integer> node2 = new BSTNode<Integer>(6,node5,node6);
+		BSTNode<Integer> node1 = new BSTNode<Integer>(2,node3,node4);
+		BSTNode<Integer> root = new BSTNode<Integer>(4,node1,node2);
+		
+		BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
+		System.out.println("is bst? " + bst.checkBST(root));
+	}
+	
 	public static void main (String[] args) {
 		HashTableUse use = new HashTableUse();
 		use.useQueue();
@@ -353,5 +397,7 @@ public class HashTableUse {
 		use.useAreAnagrams();
 		use.rotateMatrix();
 		use.deleteMiddle();
+		use.printMatrix();
+		use.useCheckBST();
 	}
 }

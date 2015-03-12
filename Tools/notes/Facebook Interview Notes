@@ -96,3 +96,52 @@ such that the 1's digit is at the head of the list. Write function to add two nu
 
 5. Given a circular linked list, implement an algorithm which returns the node at the beginning of the loop.
   
+6. reverse print a singly linked list	
+  
+************************************************************
+Stacks and Queues
+************************************************************
+1. Describe how you would use a single array to implement three stacks
+-	question:	what to put in the stack: T
+
+2. Design a stack which do push, pull, min all in O(1) time.
+-	Use additional stack to track the min
+
+3. implement sub-stacks to mimic the behavior of a large stack, also implement popAt(index)
+// an int to track which substack it is in
+
+4. Implement a MyQueue class which implements a queue using two stacks
+-	push everything to a newElementStack, when pull, keep poping the newElementStack until it is in reverse order
+
+5. Write a program to sort a stack in ascending order (with biggest items on top). Use at most one additional
+stack to hold items, but you may not copy the elements into another data structure. The stack supports the 
+following operations: push pop peek and isEmpty
+
+6. An animal shelter holds only dogs and cats, and operates on a strictly "first in, first out" basis.
+implement "enqueue, dequeueAny, dequeueDog, dequeueCat"
+-	two linkedlist to implement two arrays, for the Animal class, enqueue with a timestamp variable
+-	when dequeue, check the head of both dog and cat queue to see which one arrives first
+-	enqueue: addLast; dequeue: poll, peek 
+
+************************************************************
+Sorting Algorithms
+************************************************************
+1. Selection sort
+-	find the largest value, put at the back
+
+2. Insertion sort
+-	traverse the array, whenever find a smaller element, insert it at the correct place and shift all data behind
+
+3. Merge sort
+-	break the array into smallest pair, and merge
+
+4. Quick sort
+-	1. choose a pivot point: leftmost, mid, median of first mid and last
+-	2. move the pivot to the last/first position, sort the rest of the array in place by
+	partitioning it into 2 sub-arrays
+-   3. move the pivot back to its final position
+-	4. recursively sort the sub-arrays
+
+************************************************************
+Trees and Graphs
+************************************************************
