@@ -1,0 +1,8 @@
+4,2,19,-5,6,2,9,8,7,3
+Find 3
+Insert 12
+Insert 2
+Delete 4
+Delete 3
+Find 1
+Insert 15

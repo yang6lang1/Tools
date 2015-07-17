@@ -1,0 +1,7 @@
+Find 3		:Found; 3 is the 3th element of the list
+Insert 12	:After the insertion, 12 is the 9th element of the list
+Insert 2	:Value 2 is already in the list, not going to insert
+Delete 4	:4 is the 4th element of the list, deleted
+Delete 3	:3 is the 3th element of the list, deleted
+Find 1		:Not found
+Insert 15	:After the insertion, 15 is the 8th element of the list
