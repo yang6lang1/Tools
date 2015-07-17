@@ -5,3 +5,9 @@ Delete 4	:4 is the 4th element of the list, deleted
 Delete 3	:3 is the 3th element of the list, deleted
 Find 1		:Not found
 Insert 15	:After the insertion, 15 is the 8th element of the list
+
+The resulting tree: (Format: [L(x), M(y)]:sizeOfNode)
+	[L(8), M(19)]:9	
+	[L(6), M(8)]:5	[L(12), M(19)]:4	
+	[L(-5), M(2)]:3	[L(7), M(8)]:2	[L(9), M(12)]:2	[L(15), M(19)]:2	
+	[-5]:1	[2]:1	[6]:1	[7]:1	[8]:1	[9]:1	[12]:1	[15]:1	[19]:1	

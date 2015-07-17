@@ -103,6 +103,9 @@ public class TreeTestCases {
 		}
 	  }
 
+	  writer.println();
+	  writer.println("The resulting tree: (Format: [L(x), M(y)]:sizeOfNode)");
+	  this.printTreeToFile(t.getRoot(), writer);
 	  writer.close();
 	} catch (FileNotFoundException e) {
 	  e.printStackTrace();
@@ -408,5 +411,52 @@ public class TreeTestCases {
 		}
 	  }
 	}
+  }
+  
+  public void printTreeToFile(Node n, PrintWriter writer){
+	if(n == null){
+	  writer.println("Tree is empty.");
+	  return;
+	}
+
+	queue  = new LinkedList<Node>();
+	StrQueue = new LinkedList<String>();
+
+	Node curr = n;
+	String currStr = n.toString();
+
+	queue.addLast(curr);
+	StrQueue.addLast(currStr);
+	queue.addLast(null);
+	StrQueue.addLast("\n");
+	while(!queue.isEmpty()){
+	  curr = queue.removeFirst();
+	  currStr = StrQueue.removeFirst();
+
+	  writer.print("\t"+ currStr);
+
+	  if(curr != null){
+		if(curr.getFirstChild() != null){
+		  queue.addLast(curr.getFirstChild());
+		  StrQueue.addLast(curr.getFirstChild().toString());
+		}
+		if(curr.getSecondChild()!= null){
+		  queue.addLast(curr.getSecondChild());
+		  StrQueue.addLast(curr.getSecondChild().toString());
+		}
+		if(curr.getThirdChild()!= null){
+		  queue.addLast(curr.getThirdChild());
+		  StrQueue.addLast(curr.getThirdChild().toString());
+		}
+	  }
+	  else{
+		queue.addLast(null);
+		StrQueue.addLast("\n");
+		if(queue.size() == 1){
+		  break;
+		}
+	  }
+	}
+  
   }
 }
