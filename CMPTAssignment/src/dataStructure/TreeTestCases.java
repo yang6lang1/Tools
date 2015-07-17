@@ -25,7 +25,7 @@ public class TreeTestCases {
   public void testcase(){
 	try {
 	  TXTReader reader = new TXTReader("input.txt");
-	  File file = new File("src/dataStructure/output.txt");
+	  File file = new File("src/dataStructure/0959.txt");
 	  FileWriter fw = new FileWriter(file);
 	  PrintWriter writer = new PrintWriter(fw);
 	  TwoThreeTree t = new TwoThreeTree();
