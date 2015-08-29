@@ -207,6 +207,20 @@ public class Sorting {
 	    }
 	}
 
+	public void insertionSortNum(int[] array){
+    if(array == null || array.length == 0) return;
+    for(int i = 1; i < array.length; i++){
+        int index = i;
+        int temp;
+        while(index > 0 && array[index] < array[index - 1]){
+            temp = array[index];
+            array[index] = array[index-1];
+            array[index-1] = temp;
+            index--;
+        }
+    }
+}
+	
 	public static void main(String[] args) {
 		String[] strs = {"2","4","1","3","8","5"};
 
@@ -225,6 +239,13 @@ public class Sorting {
 			System.out.println(e.getMessage());
 		}
 		for(int i : a){
+			System.out.println(i);
+		}
+		
+		System.out.println();
+		int[] b = {3,1,4,0};
+		test.insertionSortNum(b);
+		for(int i : b){
 			System.out.println(i);
 		}
 	}
