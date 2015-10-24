@@ -10,23 +10,21 @@ Facebook suggestions
 ************************************
 Describe yourself
 ************************************
-- last year of computer engineering
+- last year of computer engineering, graduate Spring 2016
 - consider myself a software guy
-- finished 16-month of coop in 2 different companies, both are 8 months and both are for software positions
-- passionate about technology, specifically machine learning, game development and OpenGL computer graphics
+- finished 16-month of coop in 2 different companies, (ZE PowerGroup Inc, SAP)
+  ZE: online analytical tool, Junior Application Developer
+  SAP: Corey team, Lumira Server build, extension manager, P&R...
+- passionate about technology, specifically cloud technology, machine learning, OpenGL computer graphics
 - strong self-starter: 
-	Set goals for myself
-	I take online coruses from Coursera, MITOCW and iTune university
-	I worked on two side projects, 2D games developed in Java so I am more proficient with Java but I am also open to other technologies.
-	I join Hackathons and case competitions in order to keep improving my technical skills and interpersonal skills.
-	I was planning to participate in GSoC to contribute to Open Source Community
-- I am technical but also team oriented
-	as an engineering student, most of my projects are team based
-	comfortable working in a team
-	In SAP, I volunteered for their intern committee and was selected to be the co-chair of the Intern Career Development committee
-	another co-chair, business major
-	organize events such as Networking Events, Career Workshop, Coffee Corners for other interns
-	presented the status to the SAP Vancouver Executive Leader Team
+	To improve technical skills and problem solving skills, take online coruses (Coursera, MITOCW), 
+			attend case competition and hackathons
+	I worked on two side projects, 2D games developed in Java 
+- I am technical but comfortable about communicating with other people
+	as an engineering student, most of my projects are team based, comfortable working in a team
+	In SAP, I was selected to be the Intern Career Development committee co-chair of the
+	organize events such as Speed Networking, Career Workshop, Coffee Corners for other interns
+	presented the status to the SAP Vancouver Executive Leader Team (ELT)
 	I find that experience very enjoyable and beneficial to me
 
 ************************************
@@ -74,18 +72,28 @@ SAP
 Side project
 ************************************
 I have worked on 2 side projects so far, both are Java 2D games that run on desktop and both are rendered using Java Swing.
-The first one is a customizable pinball game called Gizmoball, which is inspired by a course project of MIT OCW. I worked on this project individually for four months and learned a lot of stuff, such as how to build application interface using Java Swing, OOP, basic collision detections, and also the 
-basics of XML because I implemented an XML parser and reader to save and load the game configurations. Unfortunately, the game was pretty buggy
-and I didn't realize what I did wrong until the late stage of the development. I figured out the problem after doing a lot of research and realized
-it is a bad idea to track the game objects using their pixel positions because pixels are always integers, it is almost inevitable to have tunnelling
-effect if the object moves too fast. I did my research, and that brought me into my second side project.
+The first one is a customizable pinball game called Gizmoball, which is inspired by a course project of MIT OCW. 
+I worked on this project individually for four months and learned a lot of stuff, such as how to build application 
+interface using Java Swing, OOP, basic collision detections, and also the basics of XML because I implemented an 
+XML parser and reader to save and load the game configurations. Unfortunately, the game was pretty buggy and I 
+didn't realize what I did wrong until the late stage of the development. I figured out the problem after doing 
+a lot of research and realized it is a bad idea to track the game objects using their pixel positions because 
+pixels are always integers, it is almost inevitable to have tunneling effect if the object moves too fast. 
+I did my research, and that brought me into my second side project.
 
-I would like to describe my second side project mentioned on my Resume, Blockadia, is a game engine. The user can use this game engine to quickly create their own 2d games. It has a framework that supports user to implement save/load, zoom in/out in the virtual game world, physics simulation (JBox2D) and rendering using Java Swing.
-In this project, I worked with a friend and used GitHub to manage the code, branches and bugs of the project. My friend took charge of the user interface 
-I was working on the game back-end including simple frame-based sprite animation, collision handling, user input handling and the 2D viewport camera with the ability of
-zooming in/out and dragging to move the view. I have finished creating a spaceship demo game using my game engine and wrapped it into an executable file so if you are interested,
-I can send it to you right away. From this project, I got a lot of practice on OOP and became more proficient with the use of some more advanced Java features such as generics, abstract
-class, input listeners in Java Swing because they are used everywhere. This project also get me exposed to many new technologies such as OpenGL rendering and game AI development. It made me realize how many things I want to learn. I became very interested in things like Thread programming, Networking topics(TCP, UDP),  and game graphics rendering. I started learning OpenGL because of this.
+I would like to describe my second side project mentioned on my Resume, Blockadia, is a game engine. The user 
+can use this game engine to quickly create their own 2d games. It has a framework that supports user to implement 
+save/load, zoom in/out in the virtual game world, physics simulation (JBox2D) and rendering using Java Swing.
+In this project, I worked with a friend and used GitHub to manage the code, branches and bugs of the project. 
+My friend took charge of the user interface I was working on the game back-end including simple frame-based 
+sprite animation, collision handling, user input handling and the 2D viewport camera with the ability of
+zooming in/out and dragging to move the view. I have finished creating a spaceship demo game using my game engine 
+and I can show you if u are interested. From this project, I got a lot of practice on OOP and became more 
+proficient with the use of some more advanced Java features such as generics, abstract class, input listeners 
+in Java Swing because they are used everywhere. This project also get me exposed to many new technologies such 
+as OpenGL rendering and game AI development. It made me realize how many things I want to learn. 
+I became very interested in things like Thread programming, Networking topics(TCP, UDP),  
+and game graphics rendering. I started learning OpenGL because of this.
 
 ************************************
 Most difficult problem
