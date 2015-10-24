@@ -1,0 +1,20 @@
+100,Ian,Goldman
+102,Robert,Gorry
+105,Ed,Greiner
+106,Keith,B. Johnson
+107,Alan,Kavraki
+110,Peter,Kennedy
+120,Matthias,Mellor-Crummey
+122,Ronald,Nguyen
+123,Tony,Rixner
+173,John,Subramanian
+178,David,Y. Vardi
+201,Lydia,Wallach
+202,Ken,Warren
+204,John,Barland
+205,Dung,Cartwright
+206,Scott,Chen
+209,Devika,Cooper
+219,Moshe,Cox
+220,Dan,Druschel
+221,Joe,Felleisen

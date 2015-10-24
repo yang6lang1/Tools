@@ -1,0 +1,33 @@
+100,Structured Basic Programming and Software Packages
+101,Modula 2
+103,Introduction to Pascal Programming
+104,Introduction to MODULA 2 as a Second High Level Programming Language
+105,Fundamental Concepts of Computing
+110,Event-Driven Programming in Visual Basic
+112,Introduction to an Additional Programming Language - C
+116,Introduction to an Additional Programming Language - SmallTalk
+201,Data and Program Organization
+205,Introduction to Formal Topics in Computing Science
+275,Software Engineering
+290,Introduction to Digital Systems
+300,Operating Systems I
+301,Information Systems Management
+305,Computer Simulation and Modeling
+307,Data Structures and Algorithms
+320,Social Implications of a Computerised Society
+340,Computers In Biomedicine
+354,Database Systems I
+361,Introduction to Computer Graphics
+363,User Interface Design
+371,Data Communications and Networking
+383,Comparative Programming Languages
+384,Symbolic Computing
+390,Digital Circuits and Systems
+400,Hardware Architecture
+401,Operating Systems II
+405,Design and Analysis of Computing Algorithms
+412,Computational Vision
+413,Computational Linguistics
+454,Database Systems II
+459,Data Mining and Data Warehousing
+475,Software Engineering II

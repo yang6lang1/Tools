@@ -1,0 +1,28 @@
+100,Databases
+100,Vision
+100,Human-Computer Interaction
+102,Vision
+102,Image Compression
+105,Software And Hardware Systems
+106,Algorithm Analysis
+107,VLSI Design
+110,Databases
+110,Operating Systems
+120,VLSI Design
+122,Graphics
+123,Human-Computer Interaction
+123,Social Studies
+173,Theory
+178,Data Mining
+201,Algorithm Analysis
+202,Biology
+202,Data Mining
+204,Software And Hardware Systems
+205,Artificial Intelligence
+206,Video on Demand
+209,Databases
+219,Databases
+220,Theory
+221,Data Mining
+221,Graphics
+221,Biology

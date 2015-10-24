@@ -1,0 +1,44 @@
+100,Software Engineering
+100,Programming Languages
+101,Programming Languages
+103,Programming Languages
+104,Programming Languages
+105,Computer Science
+110,Programming Languages
+112,Programming Languages
+116,Programming Languages
+201,Software Engineering
+201,Programming Languages
+205,Theory
+275,Software Engineering
+290,Software And Hardware Systems
+300,Operating Systems
+301,Databases
+305,Software And Hardware Systems
+307,Algorithm Analysis
+307,Programming Languages
+320,Computer Science
+340,Biology
+340,Data Mining
+340,Machine Learning
+340,Algorithm Analysis
+354,Databases
+361,Graphics
+361,Human-Computer Interaction
+363,Human-Computer Interaction
+371,Distributed Computing
+371,Computer Networks
+383,Programming Languages
+384,Artificial Intelligence
+390,VLSI Design
+400,Software And Hardware Systems
+401,Operating Systems
+405,Algorithm Analysis
+412,Vision
+412,Color Image Analysis
+412,Pattern Recognition
+413,Natural Language Processing
+454,Databases
+459,Data Mining
+459,Data Warehousing
+475,Software Engineering
