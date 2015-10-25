@@ -15,13 +15,13 @@ public class DBConnection {
 				"password = " + password;
 		PreparedStatement pstmt = null;
 		ResultSet rs;
-		
+
 		try
 		{
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection(connectionUrl);
 			
-			//create tables:
+			//create tables & load data:
 			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Courses'");
 			rs = pstmt.executeQuery();
 			if(!rs.next()){//table already created
@@ -30,15 +30,78 @@ public class DBConnection {
 			}
 			insertDataIntoTable("Courses",con);
 			rs.close();
+			System.out.println();
+
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'CourseSections'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table CourseSections");
+				con.prepareStatement(Queries.createCourseSectionsTable).executeUpdate();
+			}
+			insertDataIntoTable("CourseSections",con);
+			rs.close();
+			System.out.println();
 			
-//			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Courses'");
-//			rs = pstmt.executeQuery();
-//			if(!rs.next()){//table already created
-//				System.out.println("Created new table Courses");
-//				con.prepareStatement(Queries.createCoursesTable).executeUpdate();
-//			}
-//			rs.close();
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Instructors'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table Instructors");
+				con.prepareStatement(Queries.createInstructorsTable).executeUpdate();
+			}
+			insertDataIntoTable("Instructors",con);
+			rs.close();
+			System.out.println();
+
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Students'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table Students");
+				con.prepareStatement(Queries.createStudentsTable).executeUpdate();
+			}
+			insertDataIntoTable("Students", 5 ,con);
+			rs.close();
+			System.out.println();
+
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Enrollments'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table Enrollments");
+				con.prepareStatement(Queries.createEnrollmentsTable).executeUpdate();
+			}
+			insertDataIntoTable("Enrollments", 6 ,con);
+			rs.close();
+			System.out.println();
 			
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Areas'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table Areas");
+				con.prepareStatement(Queries.createAreasTable).executeUpdate();
+			}
+			insertDataIntoTable("Areas",con);
+			rs.close();
+			System.out.println();
+
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'AreasOfCourse'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table AreasOfCourse");
+				con.prepareStatement(Queries.createAreasOfCourseTable).executeUpdate();
+			}
+			insertDataIntoTable("AreasOfCourse",con);
+			rs.close();
+			System.out.println();
+
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'AreasOfInstructor'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table AreasOfInstructor");
+				con.prepareStatement(Queries.createAreasOfInstructorTable).executeUpdate();
+			}
+			insertDataIntoTable("AreasOfInstructor",con);
+			rs.close();
+			System.out.println();
+
 			System.out.println("Finish printing results"); 
 			con.close();
 		}catch(ClassNotFoundException ce)
@@ -51,13 +114,12 @@ public class DBConnection {
 			return;
 		}
 	}
-	
+
 	private void insertDataIntoTable(String tableName, Connection con){
 		try {
 			TXTReader reader = new TXTReader("../../data/"+tableName+".txt");
 			String line;
 			while((line = reader.readNextLine())!= null){
-				//System.out.println(line);
 				String[] tokens = line.split(",");
 				StringBuffer stmt = new StringBuffer();
 				for(int i = 0; i <tokens.length; i++){
@@ -68,10 +130,8 @@ public class DBConnection {
 				}
 				System.out.println("INSERT INTO " + tableName + " VALUES ("+stmt.toString()+")");
 				con.prepareStatement("INSERT INTO " + tableName + " VALUES ("+stmt.toString()+")")
-					.executeUpdate();
-				
+				.executeUpdate();
 			}
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -80,6 +140,38 @@ public class DBConnection {
 			e.printStackTrace();
 		}
 	}
+
+	private void insertDataIntoTable(String tableName, int numOfCols, Connection con){
+		try {
+			TXTReader reader = new TXTReader("../../data/"+tableName+".txt");
+			String line;
+			while((line = reader.readNextLine())!= null){
+				String[] tokens = line.split(",");
+				StringBuffer stmt = new StringBuffer();
+				for(int i = 0; i < numOfCols; i++){
+					if(i < tokens.length){
+						stmt.append("'");
+						stmt.append(tokens[i]);
+						stmt.append("'");
+					}
+					else{
+						stmt.append("NULL");
+					}
+					if(i+1 < numOfCols)	stmt.append(",");
+				}
+				System.out.println("INSERT INTO " + tableName + " VALUES ("+stmt.toString()+")");
+				con.prepareStatement("INSERT INTO " + tableName + " VALUES ("+stmt.toString()+")")
+				.executeUpdate();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public static void main(String[] args){
 		DBConnection con = new DBConnection();
 	}
