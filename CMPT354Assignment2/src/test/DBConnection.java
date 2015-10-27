@@ -1,5 +1,8 @@
 package test;
 
+/**
+ * Main class.
+ * */
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
