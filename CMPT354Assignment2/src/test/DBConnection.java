@@ -23,7 +23,7 @@ public class DBConnection {
 		{
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection(connectionUrl);
-			
+
 			//create tables & load data:
 			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Courses'");
 			rs = pstmt.executeQuery();
@@ -35,16 +35,6 @@ public class DBConnection {
 			rs.close();
 			System.out.println();
 
-			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'CourseSections'");
-			rs = pstmt.executeQuery();
-			if(!rs.next()){//table already created
-				System.out.println("Created new table CourseSections");
-				con.prepareStatement(Queries.createCourseSectionsTable).executeUpdate();
-			}
-			insertDataIntoTable("CourseSections",con);
-			rs.close();
-			System.out.println();
-			
 			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Instructors'");
 			rs = pstmt.executeQuery();
 			if(!rs.next()){//table already created
@@ -52,6 +42,16 @@ public class DBConnection {
 				con.prepareStatement(Queries.createInstructorsTable).executeUpdate();
 			}
 			insertDataIntoTable("Instructors",con);
+			rs.close();
+			System.out.println();
+
+			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'CourseSections'");
+			rs = pstmt.executeQuery();
+			if(!rs.next()){//table already created
+				System.out.println("Created new table CourseSections");
+				con.prepareStatement(Queries.createCourseSectionsTable).executeUpdate();
+			}
+			insertDataIntoTable("CourseSections",con);
 			rs.close();
 			System.out.println();
 
@@ -74,7 +74,7 @@ public class DBConnection {
 			insertDataIntoTable("Enrollments", 6 ,con);
 			rs.close();
 			System.out.println();
-			
+
 			pstmt = con.prepareStatement(Queries.getExistingTables+" WHERE TABLE_NAME = 'Areas'");
 			rs = pstmt.executeQuery();
 			if(!rs.next()){//table already created
@@ -105,6 +105,21 @@ public class DBConnection {
 			rs.close();
 			System.out.println();
 
+			con.prepareStatement(Queries.InsertStudentJinYi).executeUpdate();
+			System.out.println(Queries.InsertStudentJinYi);
+			System.out.println();
+
+			con.prepareStatement(Queries.InsertStudentLiuFangzhen).executeUpdate();
+			System.out.println(Queries.InsertStudentLiuFangzhen);
+			System.out.println();
+
+			updateDataInEnrollmentsTable("EnrollmentsWithGrades", 6, con);
+			System.out.println();
+			
+			con.prepareStatement(Queries.UpdateStudentGPA).executeUpdate();
+			System.out.println(Queries.UpdateStudentGPA);
+			System.out.println();
+			
 			System.out.println("Finish printing results"); 
 			con.close();
 		}catch(ClassNotFoundException ce)
@@ -165,6 +180,43 @@ public class DBConnection {
 				System.out.println("INSERT INTO " + tableName + " VALUES ("+stmt.toString()+")");
 				con.prepareStatement("INSERT INTO " + tableName + " VALUES ("+stmt.toString()+")")
 				.executeUpdate();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void updateDataInEnrollmentsTable(String fileName, int numOfCols, Connection con){
+		try {
+			TXTReader reader = new TXTReader("../../data/"+fileName+".txt");
+			String line;
+			while((line = reader.readNextLine())!= null){
+				String[] tokens = line.split(",");
+				String CourseNo = tokens.length >= 1? tokens[0] : "NULL" ;
+				String SectionNo = tokens.length >= 2? tokens[1] : "NULL";
+				String Year = tokens.length >= 3? tokens[2] : "NULL";
+				String Semester = tokens.length >= 4? tokens[3] : "NULL";
+				String StudentNo = tokens.length >= 5? tokens[4] : "NULL";
+				String Grade = tokens.length >= 6? tokens[5] : "NULL";
+				StringBuffer stmt = new StringBuffer();
+				if(tokens.length >= numOfCols){
+					stmt.append("Grade = ").append("'").append(Grade).append("'");
+				}
+				else{
+					stmt.append("Grade = NULL");
+				}
+				String strStmt = "UPDATE Enrollments SET " + stmt.toString()+ " WHERE "
+						+ "CourseNo = '"+ CourseNo + "' AND "
+						+ "[Year] = '"+ Year + "' AND "
+						+ "Semester = '"+ Semester + "' AND "
+						+ "StudentNo = '"+ StudentNo + "'";
+				
+				System.out.println(strStmt);
+				con.prepareStatement(strStmt).executeUpdate();
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
