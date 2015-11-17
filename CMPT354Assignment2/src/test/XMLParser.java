@@ -81,7 +81,7 @@ public class XMLParser {
 			Transformer t = TransformerFactory.newInstance().newTransformer();
 			t.setOutputProperty(OutputKeys.INDENT, "yes");
 			t.setOutputProperty(OutputKeys.STANDALONE, "yes");
-			t.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+			t.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
 			
 			Result output = new StreamResult(new File("./data/Summary.xml"));
 			Source input = new DOMSource(dataDoc);
